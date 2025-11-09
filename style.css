@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #002339; /* le background permet d'avoir un beau dégradé de bleu */
+    color: #ffffff; /* couleur du texte en blanc */
+}
+
+.container{
+    margin: 12%; /* marge autour du conteneur: la marge défini l'espace entre le conteneur et les bords de la fenêtre */
+    width: 90%; /* largeur du conteneur */   
+    max-width: 700px; /* largeur maximale du conteneur */
+    background-color: aqua;
+}
+
+.display{
+    width: 100%; /* largeur de la zone d'affichage */
+    margin-top: 50px; /* marge en haut de la zone d'affichage, elle défini l'espace entre le titre et la zone d'affichage */
+    margin-bottom: 30px; /* marge en bas de la zone d'affichage, elle défini l'espace entre la zone d'affichage et le bouton */
+    background: #fff; /* couleur de fond de la zone d'affichage en blanc */
+    color: #333; /* couleur du texte en gris foncé */
+    display: flex; /* utilisation de flexbox pour aligner les éléments à l'intérieur de la zone d'affichage */
+    align-items: center; /* alignement vertical des éléments au centre */
+    justify-content: space-between; /* espace entre les éléments */
+    padding: 26px 20px; /* padding à l'intérieur de la zone d'affichage  défini l'espace entre le texte et les bords de la zone d'affichage */
+    border-radius: 5px; /* coins arrondis de la zone d'affichage */
+}
