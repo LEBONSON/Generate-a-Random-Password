@@ -1,8 +1,8 @@
 *{
-    margin:0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    margin:0;  /* supprime les marges par défaut de tous les éléments */
+    padding: 0; /* supprime les paddings par défaut de tous les éléments *//*   
+    font-family: 'Poppins', sans-serif; /* police d'écriture utilisée pour tout le document */
+    box-sizing: border-box; /* permet de gérer la taille des éléments en incluant le padding et la bordure dans la largeur et la hauteur */
 }
 
 body{
@@ -14,7 +14,7 @@ body{
     margin: 12%; /* marge autour du conteneur: la marge défini l'espace entre le conteneur et les bords de la fenêtre */
     width: 90%; /* largeur du conteneur */   
     max-width: 700px; /* largeur maximale du conteneur */
-    background-color: aqua;
+    
 }
 
 .display{
@@ -28,4 +28,46 @@ body{
     justify-content: space-between; /* espace entre les éléments */
     padding: 26px 20px; /* padding à l'intérieur de la zone d'affichage  défini l'espace entre le texte et les bords de la zone d'affichage */
     border-radius: 5px; /* coins arrondis de la zone d'affichage */
+}
+
+.container h1{
+    font-weight: 500; /* épaisseur de la police du titre */
+    font-size: 45px; /* taille de la police du titre */ 
+}
+
+.container h1 span{
+    color: #019f55; /* couleur verte pour le mot "Random Password" */
+    border-bottom: 4px solid #019f55; /* ligne verte sous le mot "Random Password" */
+   padding-bottom: 7px; /* espace entre le mot "Random Password" et la ligne verte */
+}
+
+.display img{
+    width:30px; /* largeur de l'image */
+    cursor: pointer; /* curseur en forme de pointeur pour l'image */
+}
+.display input{
+    border:0; /* pas de bordure pour le champ de saisie */
+    outline: 0; /* pas de contour pour le champ de saisie */
+    font-size: 24px; /* taille de la police pour le champ de saisie */
+ 
+}
+
+.container button img {
+    width: 28px; /* largeur de l'image dans le bouton */
+    margin-right: 10px; /* marge à droite de l'image dans le bouton */
+}
+
+.container button {
+    border: 0; /* pas de bordure pour le bouton */
+    outline:0 ; /* pas de contour pour le bouton */
+    background: #019f55; /* couleur de fond du bouton en vert */
+    color: #fff; /* couleur du texte du bouton en blanc */
+    font-size: 22px; /* taille de la police du texte du bouton */
+    font-weight: 300; /* épaisseur de la police du texte du bouton */
+    display: flex; /* utilisation de flexbox pour aligner les éléments à l'intérieur du bouton */
+    align-items: center; /* alignement vertical des éléments au centre */
+    justify-content: center; /* alignement horizontal des éléments au centre */
+    padding: 16px 26px; /* padding à l'intérieur du bouton, défini l'espace entre le texte et les bords du bouton */
+    border-radius: 5px; /* coins arrondis du bouton */
+    cursor: pointer; /* curseur en forme de pointeur pour le bouton */ 
 }
