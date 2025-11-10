@@ -11,12 +11,13 @@
         <h1>Generate a <br><span>Random Password</span></h1>
         <div class="display">
             <input type="text" id="password" placeholder="Password">
-            <img src="/images/copy.png" alt="copy image">
+            <img src="/images/copy.png" alt="copy image" onclick="copyPassword()">
         </div>
-        <button><img src="images/generate.png ">Generate Password</button>
+        <button onclick="createPassword()"><img src="images/generate.png ">Generate Password</button>
     </div>
+     
     <script>
-        const passwordBox= document.getElementById("password");
+        const passwordBox= document.getElementById("password"); //récupère l'élément input avec l'id "password" et le stocke dans la variable passwordBox, document.getElementById est une méthode qui renvoie l'élément correspondant à l'id spécifié
         const length = 12;
         const upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         const lowerCase= "abcdefghijklmnopqrstuvwxyz";
@@ -24,6 +25,7 @@
         const symbols= "!@#$%^&*()_+~`|}{[]:;?><,./-=";
         const allCharacters = upperCase + lowerCase + numbers + symbols;
 
+/* fonction pour générer le mot de passe */
        
         function createPassword(){
             let password= "";
@@ -31,13 +33,22 @@
             password+= lowerCase[Math.floor(Math.random() * lowerCase.length)]; //ajoute une lettre minuscule aléatoire
             password+= numbers[Math.floor(Math.random() * numbers.length)]; //ajoute un chiffre aléatoire
             password+= symbols[Math.floor(Math.random() * symbols.length)]; // ajoute un symbole aléatoire
-        
+      
+            
+    /* boucle pour remplir le reste du mot de passe avec des caractères aléatoires jusqu'à atteindre la longueur désirée */
         while (length > password.length){
             password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
         }
-        
+        passwordBox.value = password; //affiche le mot de passe généré dans la zone de texte, value est une propriété des éléments input qui définit ou renvoie la valeur actuelle de l'élément
+
         }
 
+
+        function copyPassword(){
+            passwordBox.select(); //sélectionne le texte dans la zone de texte
+            document.execCommand("copy"); //copie le texte sélectionné dans le presse-papiers
+
+        }
         
     </script>
 </body>
